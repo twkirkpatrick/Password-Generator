@@ -91,13 +91,19 @@ function generatePassword(){
          
 
      }
+           var newPass = possible.slice(0, length);
 
-           var newPass = possible.slice(2, 9);
+           return newPass;
+           
+     
+     
+     
+     //var newPass = possible.slice(2, 9);
 
             //use String slice method!
      
      
-     return newPass;
+     
 
      
 
