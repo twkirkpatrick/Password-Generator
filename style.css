@@ -2,6 +2,7 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  font-family: 'Rajdhani', sans-serif;
 }
 
 html,
@@ -14,7 +15,7 @@ body,
 
 body {
   font-family: sans-serif;
-  background-color: lightslategray;
+  background-color: slategray;
 }
 
 .wrapper {
@@ -31,10 +32,11 @@ header {
 }
 
 .card {
-  background-color: #35EC97;
+  background-color: mediumturquoise;
   border-radius: 30px;
   border-width: 1px;
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px 0px;
+  box-shadow: 25px 25px 12px dimgray;
+  border: solid 3px light
   color: hsl(206, 17%, 28%);
   font-size: 18px;
   margin: 150px auto;
@@ -69,6 +71,8 @@ h2{
 
 .card-footer {
   text-align: center;
+  
+  
 }
 
 .card-footer::before {
@@ -87,18 +91,24 @@ h2{
 
 .btn {
   border: none;
-  background-color: black;
+  background-color: lightgray;
   border-radius: 25px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px
     0px;
-  color: hsl(0, 0%, 100%);
+  color: black;
   display: inline-block;
   font-size: 22px;
   line-height: 22px;
-  margin: 16px 16px 16px 20px;
-  padding: 14px 34px;
+  margin: 30px 16px 16px 10px;
+  padding: 28px;
   text-align: center;
   cursor: pointer;
+}
+
+.btn:hover{
+  background-color: gray;
+  color: black;
+  
 }
 
 button[disabled] {

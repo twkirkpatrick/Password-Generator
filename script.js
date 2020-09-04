@@ -11,6 +11,10 @@ var special = ["~", "`", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "-", 
 
 
 
+
+
+
+
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
@@ -94,25 +98,6 @@ function generatePassword(){
            var newPass = possible.slice(0, length);
 
            return newPass;
-           
-     
-     
-     
-     //var newPass = possible.slice(2, 9);
-
-            //use String slice method!
-     
-     
-     
-
-     
-
-     
-     
-
-    
-
-
 
 }
 
