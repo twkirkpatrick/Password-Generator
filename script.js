@@ -16,22 +16,25 @@ var generateBtn = document.querySelector("#generate");
 
 
 //Prompt user for password options
-function getPasswordOpt(){
+
+
+//Help generate password with the users response
+function generatePassword(){
     
     var length = parseInt(prompt("How many characters would you like the password to be?"));
     if (isNaN(length) === true ) {
         alert("password length must be a number")
-        return;
+        
     }
 
     if (length < 8){
         alert("Password must be at least 8 characters.");
-        return;
+        
     }
     
     if (length > 128){
         alert("Password must not exceed 128 characters.")
-        return;
+        
     }
 
     var lowerCase = confirm("Would you like to include lowercase letters?");
@@ -45,74 +48,58 @@ function getPasswordOpt(){
         specialChar === false
         ){
         alert("Must select at least one character type");
-        return;
+        
     }
 
-    //Object for storing user selections
-    var passOptions = {
-        length : length,
-        caseLower : lowerCase,
-        caseUpper : upperCase,
-        charNumeric : numericChar,
-        charSpecial : specialChar
-    };
-
-
-    return passOptions;
-
-}
-
-//Help generate password with the users response
-function generatePassword(){
-    //Var will store users options 
-    var userOptions = getPasswordOpt()
-    console.log(userOptions);
-
-    var result = [];
-    var possible = [];
-    var actual = [];
+    var possible = "";
+    
 
 
     //conditions 
-    if(userOptions.caseLower){
-        var randomLower = lower[Math.floor(Math.random() * lower.length)];
-        
-        var output = possible.push(randomLower);
-
-        //console.log("randomLower " , randomLower);
-        //console.log("output " , output);
-        //console.log(possible);
-
-
-    }
-
-    if (userOptions.caseUpper){
-        var randomUpper = upper[Math.floor(Math.random() * upper.length)];
-        var output = possible.push(randomUpper);
-        //console.log("randomUpper ", randomUpper);
-
-    }
     
-    if(userOptions.charNumeric){
+
+     
+     for(var i = 0; i < length; i++){
+        if(lowerCase){
+            var randomLower = lower[Math.floor(Math.random() * lower.length)];
+            
+            possible += randomLower;
+    
+        }
+    
+        if(upperCase){
+            var randomUpper = upper[Math.floor(Math.random() * upper.length)];
+            possible += randomUpper;
+            //console.log("randomUpper ", randomUpper);
+    
+        }
         
-        var randomNum = numeric[Math.floor(Math.random() * numeric.length)];
-        var output = possible.push(randomNum);
-       //console.log("random number ", randomNum);
+        if(numericChar){
+            
+            var randomNum = numeric[Math.floor(Math.random() * numeric.length)];
+            possible += randomNum;
+           //console.log("random number ", randomNum);
+         }
+    
+         if(specialChar){
+            var randomSpec = special[Math.floor(Math.random() * special.length)];
+            possible += randomSpec;
+           //console.log("random number ", randomSpec);
+    
+         }
+
+         
+
      }
 
-     if(userOptions.charSpecial){
-        var randomSpec = special[Math.floor(Math.random() * special.length)];
-        var output = possible.push(randomSpec);
-       //console.log("random number ", randomSpec);
+           var newPass = possible.slice(2, 9);
 
-     }
+            //use String slice method!
+     
+     
+     return newPass;
 
      
-     var slice = possible.slice(0, 4);
-
-     console.log(slice);
-     
-     return slice.join("");
 
      
      
