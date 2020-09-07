@@ -113,6 +113,30 @@ function writePassword() {
 }
 
 
+
+ var textCopy = document.getElementById("password");
+
+ var buttonCopy = document.getElementById("button");
+
+ buttonCopy.addEventListener("click", copyPassword);
+
+
+function copyPassword(){
+    textCopy.select();
+    document.execCommand("copy");
+    alert("Password copied to clipboard!");
+    
+}
+
+
+
+
+
+
+
+
+
+
 //EVENT LISTENer
 generateBtn.addEventListener("click", writePassword);
 // Add event listener to generate button
