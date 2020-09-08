@@ -15,6 +15,8 @@ var generateBtn = document.querySelector("#generate");
 function generatePassword(){
     
     //Used parseInt function to convert the User's string into an integer
+    
+    //Series of if statements to ensure the User selects a number and the correct password length
     var length = parseInt(prompt("How many characters would you like the password to be? (Between 8 and 128 characters)"));
     if (isNaN(length) === true ) {
         alert("password length must be a number")
@@ -30,12 +32,14 @@ function generatePassword(){
         alert("Password must not exceed 128 characters.")
         
     }
-
+    
+    //Storing the User's responses in a variable
     var lowerCase = confirm("Would you like to include lowercase letters? Click OK for Yes and cancel for No");
     var upperCase = confirm("Would you like to include uppercase letters? Click OK for Yes and cancel for No");
     var numericChar = confirm("Would you like to include numbers? Click OK for Yes and cancel for No");
     var specialChar = confirm("Would you like to include special characters? Click OK for Yes and cancel for No");
 
+    //If statement to ensure that the User picks at least one character type
     if (lowerCase === false && 
         upperCase === false && 
         numericChar === false && 
@@ -47,7 +51,9 @@ function generatePassword(){
 
     var possible = "";
     
-    //For loop for iterating through User preferences
+    //For loop for iterating through User-selected criteria
+
+    //Utilizing Math.floor and Math.random, a random index is pulled from the arrays containing password criteria, and are concatenated to a new string.
      for(var i = 0; i < length; i++){
         if(lowerCase){
             var randomLower = lower[Math.floor(Math.random() * lower.length)];
@@ -78,6 +84,7 @@ function generatePassword(){
          
 
      }
+           
            var newPass = possible.slice(0, length);
 
            return newPass;
