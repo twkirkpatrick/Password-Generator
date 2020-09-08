@@ -32,3 +32,7 @@ THEN the password is either displayed in an alert or written to the page
 ## Resources
 *Font - https://fonts.google.com/
 *CSS Animations - https://ianlunn.github.io/Hover/
+
+### License & Copyright
+
+Copyright &copy; Tanner Kirkpatrick 2020
