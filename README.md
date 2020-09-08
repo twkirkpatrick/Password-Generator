@@ -1,5 +1,5 @@
 # Password Generator
-This is homework assignment #3 for the University of Richmond Full Stack Bootcamp.  The main goal of this project was to create a password generator utilizing **HTML5**, **CSS3**, and **Vanilla Javascript**.  Using prompts and confirms in the browser, the user is able to customize their password by selecting specific criteria including length of the password, lowercase letters, uppercase letters, numbers, and special characters.  Once the user chooses their critera, a password is generated and displayed in the text field.  The user is then able to hit the "copy" button, which conveniently copies the password to their clipboard.
+This is homework assignment #3 for the University of Richmond Full Stack Bootcamp.  The main goal of this project was to create a password generator utilizing **HTML5**, **CSS3**, and **Vanilla Javascript**.  Using prompts and confirms in the browser, the user is able to customize their password by selecting specific criteria including length of the password, lowercase letters, uppercase letters, numbers, and special characters.  Once the user chooses their criteria, a password is generated and displayed in the text field.  The user is then able to hit the "copy" button, which conveniently copies the password to their clipboard.
 
 ## User Story
 
